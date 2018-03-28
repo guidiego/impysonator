@@ -3,3 +3,12 @@
 
 Um simples script em python para achar possiveis frase não impessoais em seus artigos :rocket:
 
+## Como instalar/usar
+
+Você precisa ter o python `3.6` na sua maquina, após isso:  
+
+`pip install impysonator`  
+
+`impysonator myfolder/or/myfile`
+
+ [![gif explicativo](http://g.recordit.co/g9kyZheOXO.gif)
