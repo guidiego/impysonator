@@ -8,6 +8,6 @@ def recursive_read(topdir):
     for dirpath, dirnames, files in os.walk(topdir):
         for name in files:
             f = File(dirpath, name)
-            results.push(f)
+            results.append(f)
 
     return results
