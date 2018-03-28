@@ -1,8 +1,15 @@
 language: python
 python:
-    - "3.6"
-install: "pip install -r requirements.txt"
+  - '3.6'
+install: pip install -r requirements.txt
 script:
-    - py.test --cov=impysonator
+  - py.test --cov=impysonator
 after_success:
-    - coveralls
+  - coveralls
+deploy:
+  provider: pypi
+  user: guidiiego
+  password:
+    secure: gcj8+JQizPZVH0OllcmJ+PXYdH7sZRcnpZSJwZyFKOC9h+FcX3ZjfdE7yvgtxwC7KMoL18VuuNqy7ARct+jKwb77gOGWPujJCLseqwf1RHKCJnR08nFr7f9k5H3npgBnCVoAt7jLsTq0s6cUK3DGMekKJgJ+Yi3LqwvDhTTWYW1dUj9C9OPUj94kJdDovCJpGzNU8atZwGQS12raqwA+UW/Qzp/vQz7wsDnvBsY/aGiuoxySGfEzGQkZZFd5/zC29YvNZjdI3yzUf8Zse7K8erBbdHJXH9kFlE8HOL0tBO/g+0VGivqyFg3k/VIFWFcnilHdXCZ7hS9NYQQ/7TfVoMt9TI8ZqE6lydw1mpQsRy4ubnGhWfzBMe92HOk2YE2Qcisaor31/bVOky4+MO1kFnBRIOhuvg8g4sH6rdVC0UOIvBl87pZrGN9KgxA7iDWXb3mhqdRyxQRx8Ve6OmcLKWWhMvzrJNoCRyAi8RyX1BKJe13NXp8jkVL3HKHzn+B0y+/bFJH2XTaXnA9IKUgl/rVyNfwWijMkhp/gnfXNW+tmH+HKXle3lFqMmp1/jGfvliBOGW/8VUuPEPaB1t5q3LHoXqWGgbcFJA0jzBapLIh9fC+okMgLEkMJSpFLnhTL6QGPxr+Uw15AuQu6mjNmKuQxY6DSybE1orQSAcU/1Gc=
+  on:
+    tags: true
