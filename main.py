@@ -10,8 +10,12 @@ imps = []
 for f in files:
     imps = found_impersonal(f.get_body())
 
-    if len(imps) > 0:
-        print('> File: {}'.format(f.name))
+    if len(imps) == 0:
+        break
+
+    print('\n\033[91m\033[1m> Arquivo:\033[0m \033[1m{}\033[0m'.format(f.name))
 
     for i in imps:
-        print('  Found "{0}" in line "{1}"'.format(i["word"], i["line"]))
+        print('  Encontrado \033[1m"{0}"\033[0m na linha \033[1m{1}\033[0m'.format(i["word"], i["line"]))
+
+    print("  \033[93m\033[1mTotal:\033[0m \033[1m{}\033[0m\n".format(len(imps)))
