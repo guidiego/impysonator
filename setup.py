@@ -1,15 +1,15 @@
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='impysonator',
-    version='0.1',
+    version='0.1.2',
     description='Seja Impessoal!',
     url='http://github.com/guidiego/impysonator',
     author='Guiherme Diego',
     author_email='guilherme.albino.francisco@gmail.com',
     license='MIT',
-    packages=['impysonator'],
+    packages=find_packages(exclude=["*.tests"]),
     zip_safe=False,
     keywords='python impessoal paper artigo revisão review',
     python_requires='>=3.6',
@@ -24,5 +24,9 @@ setup(
         'console_scripts': [
             'impysonator=impysonator:main',
         ],
+    },
+    project_urls={
+        'Bug Reports': 'https://github.com/guidiego/impysonator/issues',
+        'Source': 'https://github.com/guidiego/impysonator/'
     }
 )

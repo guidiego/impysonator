@@ -4,7 +4,7 @@ import sys
 from .npl import found_impersonal
 from .reader import read
 
-origin = sys.argv[1]
+origin = sys.argv[1] if len(sys.argv) > 1 else ""
 files = read(origin)
 imps = []
 
@@ -13,7 +13,7 @@ def main():
         imps = found_impersonal(f.get_body())
 
         if len(imps) == 0:
-            break
+            continue
 
         print('\n\033[91m\033[1m> Arquivo:\033[0m \033[1m{}\033[0m'.format(f.path))
 
