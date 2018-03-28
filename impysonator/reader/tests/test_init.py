@@ -1,4 +1,4 @@
-from reader import read
+from impysonator.reader import read
 
 def assert_file(file, phrase):
     assert phrase in file.get_body()[0]

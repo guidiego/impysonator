@@ -3,6 +3,6 @@ python:
     - "3.6"
 install: "pip install -r requirements.txt"
 script:
-    - py.test --cov=src
+    - py.test --cov=impysonator
 after_success:
     - coveralls
