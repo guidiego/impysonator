@@ -13,7 +13,7 @@ for f in files:
     if len(imps) == 0:
         break
 
-    print('\n\033[91m\033[1m> Arquivo:\033[0m \033[1m{}\033[0m'.format(f.name))
+    print('\n\033[91m\033[1m> Arquivo:\033[0m \033[1m{}\033[0m'.format(f.path))
 
     for i in imps:
         print('  Encontrado \033[1m"{0}"\033[0m na linha \033[1m{1}\033[0m'.format(i["word"], i["line"]))
