@@ -15,7 +15,8 @@ setup(
     python_requires='>=3.6',
     classifiers=[
         'Development Status :: 4 - Beta',
-        'Topic :: Papers Review :: Review Tools',
+        'Topic :: Text Processing :: Linguistic',
+        'Topic :: Utilities',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6'
     ],
