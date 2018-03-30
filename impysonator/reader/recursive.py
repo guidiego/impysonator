@@ -2,6 +2,7 @@ import os
 
 from .file import File
 
+
 def recursive_read(topdir):
     results = []
     topdir = os.path.join(os.getcwd(), *topdir.split("/"))

@@ -1,5 +1,6 @@
 from .contants import IMPERSONAL_EXPRESSIONS
 
+
 class Impersonal():
     def __init__(self, line, index):
         self._line = line

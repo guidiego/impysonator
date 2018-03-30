@@ -1,5 +1,6 @@
 from .impersonal import Impersonal
 
+
 def found_impersonal(body):
     results = []
 

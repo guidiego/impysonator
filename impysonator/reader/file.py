@@ -1,5 +1,6 @@
 import os
 
+
 class File():
     def __init__(self, dirpath, name):
         self.path = os.path.join(dirpath, name)

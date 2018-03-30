@@ -8,6 +8,11 @@ origin = sys.argv[1] if len(sys.argv) > 1 else ""
 files = read(origin)
 imps = []
 
+file_msg = '\n\033[91m\033[1m> Arquivo:\033[0m \033[1m{}\033[0m'
+found_msg = '  Encontrado \033[1m"{0}"\033[0m na linha \033[1m{1}\033[0m'
+total_msg = '  \033[93m\033[1mTotal:\033[0m \033[1m{}\033[0m\n'
+
+
 def main():
     for f in files:
         imps = found_impersonal(f.get_body())
@@ -15,12 +20,13 @@ def main():
         if len(imps) == 0:
             continue
 
-        print('\n\033[91m\033[1m> Arquivo:\033[0m \033[1m{}\033[0m'.format(f.path))
+        print(file_msg.format(f.path))
 
         for i in imps:
-            print('  Encontrado \033[1m"{0}"\033[0m na linha \033[1m{1}\033[0m'.format(i["word"], i["line"]))
+            print(found_msg.format(i["word"], i["line"]))
 
-        print("  \033[93m\033[1mTotal:\033[0m \033[1m{}\033[0m\n".format(len(imps)))
+        print(total_msg.format(len(imps)))
+
 
 if (__name__ == '__main__'):
     main()
