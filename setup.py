@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='impysonator',
-    version='0.1.2',
+    version='0.1.3',
     description='Seja Impessoal!',
     url='http://github.com/guidiego/impysonator',
     author='Guiherme Diego',
